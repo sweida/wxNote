@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<button type="primary"  bindtap="checkIsFingerPrint">检测是否可以指纹识别</button>
+<button type="primary"  bindtap="checkIsFacial">检测是否可以人脸识别</button>
+<button type="primary"  bindtap="HaveFingerPrint">该设备是否录入指纹</button>
+<button type="primary"  bindtap="FingerPrint">识别指纹</button>
+<button type="primary"  bindtap="FingerPrint2">跳转</button>
+<!-- <button type="primary" size="mini">指纹密码</button>
+
+bindtap="checkIsFingerPrint">检测是否可以指纹识别
+ bindtap="checkIsFacial">检测是否可以人脸识别
+ bindtap="HaveFingerPrint">该设备是否录入指纹
+ bindtap="FingerPrint">识别指纹 -->
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+<!-- <view class="contain">
+  <textarea placeholder="点击输入内容" maxlength="-1" value="{{noteDetail}}" auto-height name="textarea" class="contain"/>
+  <view class="butBox">
+    <button type="primary" size="defult">保存</button>
+  </view>
+</view> -->
+
+<view class="contain">
+  <textarea placeholder="点击输入内容" maxlength="1000" value="{{noteDetail}}" name="textarea"/>
+  <view class="butBox">
+    <button type="primary" size="defult">保存</button>
+  </view>
+</view>

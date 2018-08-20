@@ -1,0 +1,32 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>
+<view class="noteList" bindtap="detail">
+  <view>这是记事本内容</view>
+  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+  <text class="date">2018年6月14日</text>
+</view>

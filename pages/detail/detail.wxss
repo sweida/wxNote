@@ -1,0 +1,47 @@
+/* pages/detail/detail.wxss */
+page{
+  height: 100%;
+  background: #fff;
+  /* padding-bottom: 150rpx; */
+}
+.contain{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+textarea{
+  width: 100%;
+  padding: 28rpx 20rpx 0 28rpx;
+  box-sizing: border-box;
+  min-height: 800rpx;
+  line-height: 50rpx;
+  word-wrap:break-word;
+  color: #333;
+  flex: 1;
+  /* overflow: scroll; */
+  -webkit-overflow-scrolling: touch;
+  /* width: 90%; */
+  /* margin-bottom:150rpx;
+  padding-bottom:150rpx; */
+}
+.butBox{
+  height: 120rpx;
+  padding-top: 40rpx;
+  /* position: fixed; */
+  /* bottom: 0; */
+  background: #fff;
+  margin: 0;
+  width: 100%;
+  z-index: 1000;
+}
+button[type="primary"] {
+  background: #35BD64;
+  border-radius: 100rpx;
+  width: 80%;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.button-hover[type="primary"]{
+  background: #449d51;
+}
