@@ -1,32 +1,19 @@
 <!--pages/list/list.wxml-->
 <!-- <text>pages/list/list.wxml</text> -->
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
-</view>
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
-</view>
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
-</view>
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
-</view>
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
-</view>
-<view class="noteList" bindtap="detail">
-  <view>这是记事本内容</view>
-  <view>这也是记事本内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
-  <text class="date">2018年6月14日</text>
+
+<view class="noteList {{item.isTouchMove ? 'touch-move-active' : ''}}"  
+  wx:for="{{noteList}}" 
+  wx:key="id" 
+  wx:for-item="item" 
+  data-index="{{index}}" 
+  bindtouchstart="touchstart" 
+  bindtouchmove="touchmove"
+  >
+  <view  class="leftbox"  bindtap="detail">
+    <view>{{item.text}}</view>
+    <text class="date">{{item.creatDate}}</text>
+  </view>
+  <view class="delete" data-index="{{index}}" bindtap="delItem">
+    删除 
+  </view>
 </view>
