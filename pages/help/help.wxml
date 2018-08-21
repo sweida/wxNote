@@ -1,7 +1,42 @@
 <!--pages/help/help.wxml-->
 
-<view>
-  帮助页面
-</view>
+  <view class="main">
+    <view class="head_bg">
+      <image src="../../images/help_bg.jpg"></image>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">使用帮助</view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">设置密码</view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+    
+      </view>
+    </view>
 
-<tabNav active="{{active}}"></tabNav>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd" bindtap="give">打赏作者</view>
+          <view class="weui-cell__ft"></view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">意见反馈</view>
+          <view class="weui-cell__ft"></view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">关于</view>
+          <view class="weui-cell__ft"></view>
+        </view>
+      </view>
+    </view>
+    <view class="version">版本号：{{version}}</view>
+  </view>
+
+  <tabNav active="{{active}}"></tabNav>

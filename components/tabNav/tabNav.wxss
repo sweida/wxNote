@@ -6,6 +6,9 @@
   height: 120rpx;
   width: 100%;
   font-size: 24rpx;
+  z-index:100;
+  background: #fff;
+  box-shadow: 0px -2px 6px 1px #eee;
 }
 .tabNav .active{
   color: #35BD64;
@@ -28,4 +31,5 @@
   color: #fff;
   background: #35BD64;
   border-radius: 50%;
+  box-shadow: 0px 0px 8px 1px #87e6a6;
 }

@@ -5,10 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    active: 'help'
+    active: 'help',
+    version: 'v1.0.0'
   },
 
-
+  give() {
+    // wx.navigateTo({
+    //   url: 'pages/apps/largess/detail?id=jbXVn2d%2Fylk%3D'
+    // })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
