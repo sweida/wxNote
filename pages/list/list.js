@@ -7,55 +7,53 @@ Page({
     noteList: [
       {
         id: 1,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 2,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 3,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 4,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 5,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 6,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
       {
         id: 7,
-        text:
-          '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
+        text: '这是记事本内容哈哈哈哈哈哈哈哈哈啊哈啊哈啊哈啊哈哈 啊哈 啊哈啊 啊',
         creatDate: '2018年08月20日',
       },
     ],
     startX: 0, //开始坐标
     startY: 0,
+    isTouchMove: false,
+    active: 'list'
   },
 
-  detail() {
-    wx.navigateTo({
-      url: '../detail/detail',
-    })
+  detail(e) {
+    console.log(this.data.isTouchMove, 2322)
+    if(!this.data.isTouchMove) {
+      wx.navigateTo({
+        url: '../detail/detail',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -66,26 +64,22 @@ Page({
     //     url: '../index/index',
     //   })
     // }
-    // for (var i = 0; i < 10; i++) {
-    //   this.data.noteList.push({
-    //     content:
-    //       i +
-    //       ' 向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦',
-
-    //     isTouchMove: false, //默认隐藏删除
-    //   })
-    // }
   },
 
   //手指触摸动作开始 记录起点X坐标
   touchstart: function(e) {
     //开始触摸时 重置所有删除
-    this.data.noteList.forEach(function(v, i) {
+    let that = this
+    that.data.noteList.forEach(function(v, i) {
       if (v.isTouchMove)
         //只操作为true的
         v.isTouchMove = false
+        that.setData({
+          isTouchMove: false
+        })
+        console.log(that.data.isTouchMove, 333)
     })
-    this.setData({
+    that.setData({
       startX: e.changedTouches[0].clientX,
       startY: e.changedTouches[0].clientY,
       noteList: this.data.noteList,
@@ -105,6 +99,7 @@ Page({
         { X: startX, Y: startY },
         { X: touchMoveX, Y: touchMoveY },
       )
+      console.log(startX, startY, touchMoveX, touchMoveY, angle )
     that.data.noteList.forEach(function(v, i) {
       v.isTouchMove = false
       //滑动超过30度角 return
@@ -113,9 +108,15 @@ Page({
         //右滑
         if (touchMoveX > startX) {
           v.isTouchMove = false
+          that.setData({
+            isTouchMove: false
+          })
         } else {
           //左滑
           v.isTouchMove = true
+          that.setData({
+            isTouchMove: true
+          })
         }
       }
     })
@@ -138,12 +139,23 @@ Page({
   },
 
   // 删除事件
-  delItem() {
-    this.data.noteList.splice(e.currentTarget.dataset.index, 1)
-    this.setData({
-      noteList: this.data.noteList
+  delItem(e) {
+    let that = this
+    wx.showModal({
+      title: '提示',
+      content: '是否删除该笔记',
+      success: function(res) {
+        if (res.confirm) {
+          that.data.noteList.splice(e.currentTarget.dataset.index, 1)
+          that.setData({
+            noteList: that.data.noteList
+          })
+        }
+      },
     })
   },
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

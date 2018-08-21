@@ -1,0 +1,15 @@
+<!--components/tabNav/tabNav.wxml-->
+
+<view class="tabNav">
+  <view class="{{active=='list' ? 'active' : ''}}" data-route="list" bindtap="goTab">
+    <image src="../../images/icon{{active=='list' ? '1' : '1_1'}}.png"></image>
+    <view>全部笔记</view>
+  </view>
+  <view >
+    <view class="addNote" bindtap="addNote">+</view>
+  </view>
+  <view class="{{active=='help' ? 'active' : ''}}" data-route="help" bindtap="goTab">
+    <image src="../../images/icon{{active=='help' ? '2' : '2_2'}}.png"></image>
+    <view>帮助说明</view>
+  </view>
+</view>

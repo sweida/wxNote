@@ -1,0 +1,7 @@
+<!--pages/help/help.wxml-->
+
+<view>
+  帮助页面
+</view>
+
+<tabNav active="{{active}}"></tabNav>

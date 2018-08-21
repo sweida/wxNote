@@ -38,7 +38,7 @@ textarea{
 button[type="primary"] {
   background: #35BD64;
   border-radius: 100rpx;
-  width: 80%;
+  width: 60%;
   line-height: 80rpx;
   height: 80rpx;
 }

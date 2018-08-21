@@ -1,19 +1,22 @@
 <!--pages/list/list.wxml-->
-<!-- <text>pages/list/list.wxml</text> -->
+<scroll-view scroll-y style="height: calc(100% - 120rpx)" >
+  <view class="noteList {{item.isTouchMove ? 'touch-move-active' : ''}}"  
+    wx:for="{{noteList}}" 
+    wx:key="id" 
+    wx:for-item="item" 
+    data-index="{{index}}" 
+    bindtouchstart="touchstart" 
+    bindtouchmove="touchmove"
+    >
+    <view class="leftbox" data-index="{{index}}" bindtap="detail">
+      <view>{{item.text}}</view>
+      <text class="date">{{item.creatDate}}</text>
+    </view>
+    <view class="delete" data-index="{{index}}" bindtap="delItem">
+      删除 
+    </view>
+  </view>
+</scroll-view>
 
-<view class="noteList {{item.isTouchMove ? 'touch-move-active' : ''}}"  
-  wx:for="{{noteList}}" 
-  wx:key="id" 
-  wx:for-item="item" 
-  data-index="{{index}}" 
-  bindtouchstart="touchstart" 
-  bindtouchmove="touchmove"
-  >
-  <view  class="leftbox"  bindtap="detail">
-    <view>{{item.text}}</view>
-    <text class="date">{{item.creatDate}}</text>
-  </view>
-  <view class="delete" data-index="{{index}}" bindtap="delItem">
-    删除 
-  </view>
-</view>
+
+<tabNav active="{{active}}"></tabNav>

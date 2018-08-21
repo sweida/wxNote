@@ -1,9 +1,10 @@
 /* pages/list/list.wxss */
+
 .noteList{
   /* padding: 30rpx 30rpx 0 0; */
-  margin-left: 30rpx;
+  /* margin-left: 30rpx; */
   border-bottom: 1rpx solid #eee;
-  font-size: 32rpx;
+  font-size: 30rpx;
   color: #333;
   position: relative;
 
@@ -22,21 +23,21 @@
   width: 100%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-transform: translateX(90px);
-  transform: translateX(90px);
-  margin-left: -90px;
-  padding: 30rpx 30rpx 10rpx 0;
+  -webkit-transform: translateX(120px);
+  transform: translateX(120px);
+  margin-left: -120px;
+  padding: 30rpx 30rpx 10rpx 30rpx;
 }
 .delete{
   background: #ff3939;
-  width: 90px;
+  width: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
-  -webkit-transform: translateX(90px);
-  transform: translateX(90px);
+  -webkit-transform: translateX(120px);
+  transform: translateX(120px);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -46,4 +47,9 @@
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
+
+.leftbox:active{
+  background: #e6fbf5;
+}
+
 

@@ -19,6 +19,38 @@
 .usermotto {
   margin-top: 200px;
 }
-button{
-  margin: 20rpx;
+
+
+
+.main{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.main .logo{
+  width: 280rpx;
+  height: 238rpx;
+  margin: 160rpx auto;
+}
+.btnBox{
+  position: absolute;
+  bottom: 40rpx;
+  width: 100%;
+}
+button[type="primary"]{
+  background: #fff;
+  border-radius: 80rpx;
+  border: 2rpx solid #57bf8f;
+  color: #57bf8f;
+  width: 50%;
+  margin: 40rpx auto;
+  line-height: 72rpx;
+  height: 72rpx;
+  font-size: 28rpx;
+}
+.button-hover[type="primary"]{
+  background: #fff;
+  border: 2rpx solid #42956e;
+  color: #42956e;
 }

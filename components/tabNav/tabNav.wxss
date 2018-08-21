@@ -1,0 +1,31 @@
+/* components/tabNav/tabNav.wxss */
+.tabNav{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 120rpx;
+  width: 100%;
+  font-size: 24rpx;
+}
+.tabNav .active{
+  color: #35BD64;
+}
+.tabNav > view{
+  flex: 1;
+  text-align: center;
+  margin-top:10rpx;
+}
+.tabNav image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.addNote{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx auto 0;
+  line-height: 70rpx;
+  font-size: 70rpx;
+  color: #fff;
+  background: #35BD64;
+  border-radius: 50%;
+}
