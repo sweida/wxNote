@@ -3,6 +3,9 @@
 <view class="main">
   <image src="../../images/logo.png" class="logo"></image>
   <view class="btnBox">
+    <button wx:if="{{!hasUserInfo && canIUse}}" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      授权登陆
+    </button>
     <button type="primary" bindtap="FingerPrint">指纹解锁</button>
     <button type="primary" bindtap="password">数字密码</button>
   </view>

@@ -1,4 +1,4 @@
-/* pages/help/help.wxss */
+/* pages/about/about.wxss */
 .main{
   padding: 30rpx 40rpx;
   box-sizing: border-box;

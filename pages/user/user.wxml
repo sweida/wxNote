@@ -1,0 +1,53 @@
+<!--pages/user/user.wxml-->
+
+  <view class="main">
+    <view class="head_bg">
+      <!-- <image src="../../images/help_bg.jpg" class="user_bg"></image> -->
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image src="../../images/user.jpg" class="userimg"></image>
+        </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <navigator class="weui-cell__bd" url="../help/help">使用帮助</navigator>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">设置密码</view>
+          <view class="weui-cell__ft">
+          </view>
+        </view>
+    
+      </view>
+    </view>
+
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <navigator class="weui-cell__bd" target="miniProgram" open-type="navigate" app-id="wx18a2ac992306a5a4" path="pages/apps/largess/detail?accountId=5277097" extra-data="" version="release"> 打赏作者 </navigator>
+          <view class="weui-cell__ft"></view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <button open-type="contact">意见反馈</button></view>
+          <view class="weui-cell__ft"></view>
+        </view>
+        <view class="weui-cell">
+          <navigator class="weui-cell__bd" url="../about/about">关于</navigator>
+          <view class="weui-cell__ft"></view>
+        </view>
+      </view>
+    </view>
+    <view class="version">版本号：{{version}}</view>
+  </view>
+
+  <tabNav active="{{active}}"></tabNav>
+

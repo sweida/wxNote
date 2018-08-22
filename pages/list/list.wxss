@@ -49,7 +49,20 @@
 }
 
 .leftbox:active{
-  background: #e6fbf5;
+  /* background: #e6fbf5; */
+  color: #aaa;
+}
+.nolistBox{
+  text-align: center;
+}
+.nolistBox image{
+  width: 270rpx;
+  height: 230rpx;
+  margin: 300rpx auto 20rpx;
 }
 
-
+.tip{
+  font-size: 28rpx;
+  text-align: center;
+  color: #666;
+}

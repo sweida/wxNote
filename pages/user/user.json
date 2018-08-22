@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabNav": "../../components/tabNav/tabNav"
+  },
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle":"black"
+}

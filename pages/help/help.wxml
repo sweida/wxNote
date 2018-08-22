@@ -1,42 +1,11 @@
 <!--pages/help/help.wxml-->
 
   <view class="main">
-    <view class="head_bg">
-      <image src="../../images/help_bg.jpg"></image>
-    </view>
-    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-          <view class="weui-cell__bd">使用帮助</view>
-          <view class="weui-cell__ft">
-          </view>
-        </view>
-        <view class="weui-cell">
-          <view class="weui-cell__bd">设置密码</view>
-          <view class="weui-cell__ft">
-          </view>
-        </view>
-    
-      </view>
-    </view>
-
-    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-          <view class="weui-cell__bd" bindtap="give">打赏作者</view>
-          <view class="weui-cell__ft"></view>
-        </view>
-        <view class="weui-cell">
-          <view class="weui-cell__bd">意见反馈</view>
-          <view class="weui-cell__ft"></view>
-        </view>
-        <view class="weui-cell">
-          <view class="weui-cell__bd">关于</view>
-          <view class="weui-cell__ft"></view>
-        </view>
-      </view>
-    </view>
-    <view class="version">版本号：{{version}}</view>
+    <view class="center">使用指南</view>
+    <view class="title">新建笔记</view>
+    <view>1. 点击屏幕底部中间按钮即可新建笔记</view>
+    <view>2. 然后轻触屏幕中心即可开始写笔记</view>
+    <view>3. 最后务必点击页面底部[保存]按钮以保存新创建的笔记</view>
   </view>
 
-  <tabNav active="{{active}}"></tabNav>
+

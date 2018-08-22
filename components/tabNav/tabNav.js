@@ -19,9 +19,12 @@ Component({
   methods: {
     goTab(e) {
       let route = e.currentTarget.dataset.route
-      wx.redirectTo({
-        url: '../'+route+'/'+route
-      })
+      // console.log(this.properties.active, 444)
+      if (this.properties.active!=route) {
+        wx.redirectTo({
+          url: '../'+route+'/'+route
+        })
+      }
     },
     addNote() {
       wx.navigateTo({

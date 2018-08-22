@@ -1,6 +1,2 @@
 {
-  "component": true,
-  "usingComponents": {
-    "tabNav": "../../components/tabNav/tabNav"
-  }
 }

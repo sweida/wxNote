@@ -1,0 +1,9 @@
+<!--pages/about/about.wxml-->
+
+<view class="main">
+  <view class="center">关于加密笔记</view>
+  <!-- <view class="title">新建笔记</view> -->
+  <view>因为找不到一个很好的加密笔记，所以就自己开发一个</view>
+</view>
+
+

@@ -1,17 +1,13 @@
-// pages/help/help.js
+// pages/about/about.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+  
   },
 
-  give() {
-    // wx.navigateTo({
-    //   url: 'pages/apps/largess/detail?id=jbXVn2d%2Fylk%3D'
-    // })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

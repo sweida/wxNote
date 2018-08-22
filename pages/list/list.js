@@ -141,17 +141,18 @@ Page({
   // 删除事件
   delItem(e) {
     let that = this
-    wx.showModal({
-      title: '提示',
-      content: '是否删除该笔记',
+    wx.showActionSheet({
+      itemList: ['删除该笔记'],
+      itemColor: '#ff3939',
       success: function(res) {
-        if (res.confirm) {
-          that.data.noteList.splice(e.currentTarget.dataset.index, 1)
-          that.setData({
-            noteList: that.data.noteList
-          })
-        }
+        that.data.noteList.splice(e.currentTarget.dataset.index, 1)
+        that.setData({
+          noteList: that.data.noteList
+        })
       },
+      fail: function(res) {
+        console.log(res.errMsg)
+      }
     })
   },
 

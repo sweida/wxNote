@@ -1,5 +1,5 @@
 <!--pages/list/list.wxml-->
-<scroll-view scroll-y style="height: calc(100% - 120rpx)" >
+<scroll-view scroll-y style="height: calc(100% - 100rpx)" >
   <view class="noteList {{item.isTouchMove ? 'touch-move-active' : ''}}"  
     wx:for="{{noteList}}" 
     wx:key="id" 
@@ -15,6 +15,10 @@
     <view class="delete" data-index="{{index}}" bindtap="delItem">
       删除 
     </view>
+  </view>
+  <view wx:if="{{noteList.length==0}}" class="nolistBox">
+    <image src="../../images/nolist.png" ></image>
+    <view class="tip">还没有写笔记，快去写一条吧~</view>
   </view>
 </scroll-view>
 

@@ -7,7 +7,7 @@
 </view> -->
 
 <view class="contain">
-  <textarea placeholder="点击输入内容" maxlength="1000" value="{{noteDetail}}" name="textarea"/>
+  <textarea placeholder="这一刻的想法..." maxlength="1000" value="{{noteDetail}}" name="textarea"/>
   <view class="butBox">
     <button type="primary" size="defult">保存</button>
   </view>
